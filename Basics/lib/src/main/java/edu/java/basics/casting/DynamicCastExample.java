@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 //https://blog.frankel.ch/dynamic-casting-java/
+//https://nipafx.dev/casting-in-java-8-and-beyond/
 public class DynamicCastExample {
 
 	//https://blog.frankel.ch/dynamic-casting-java/
@@ -23,6 +24,7 @@ public class DynamicCastExample {
 		fruits.add(new Orange(1));
 		fruits.add(new Apple(2));
 		fruits.add(new Orange(2));
+		fruits.add(null);
 		
 		List<Apple> apples = filter(Apple.class, fruits);
 		for(Apple apple: apples) {
