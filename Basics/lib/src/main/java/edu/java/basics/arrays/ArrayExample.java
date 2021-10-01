@@ -6,6 +6,19 @@ import java.io.PrintStream;
 
 public class ArrayExample {
 	
+	//https://stackoverflow.com/questions/24289070/why-we-should-not-use-protected-static-in-java
+	/*
+	 * There's nothing wrong with a protected static field, 
+	 * as long as it's final. A mutable static field shared across classes 
+	 * is definitely cause for worry. 
+	 * Multiple classes updating a static field is not likely 
+	 * to be reliable or easy to follow, 
+	 * especially since the presence of any protected field or method 
+	 * implies that the class is meant to be extended by 
+	 * classes in other packages, 
+	 * possibly classes not under the control of the 
+	 * author of the class containing the protected field.
+	 */
 	protected static void println(Object o) {
 		System.out.println(o);
 	}
