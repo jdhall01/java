@@ -1,0 +1,18 @@
+package edu.java.basics.concurrency.runnable;
+
+public class RunnableClass implements Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		System.out.println("Inside RunnableClass.run()...");
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Thread t = new Thread(new RunnableClass());
+		t.run();
+	}
+
+}
