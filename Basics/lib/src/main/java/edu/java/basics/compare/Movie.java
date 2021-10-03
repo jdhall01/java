@@ -2,6 +2,7 @@ package edu.java.basics.compare;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import com.google.common.base.MoreObjects.ToStringHelper;
@@ -64,6 +65,23 @@ public class Movie implements Comparable<Movie> {
 		Collections.sort(movies, new RatingComparator());
 		println("sort using Collections.sort and RatingComparator:\n" + movies);
 
+		//anonymous classes
+		
+		//sort using Collections.sort and NameComparator
+		Collections.sort(movies, new Comparator<Movie> () {
+			@Override
+			public int compare(Movie o1, Movie o2) {
+				// TODO Auto-generated method stub
+				return o1.getName().compareToIgnoreCase(o2.getName());
+			}
+		});
+		println("sort using Collections.sort and anonymous class name comparator:\n" + movies);
+		
+		//lambdas
+		
+		//sort using Collections.sort and lambda for rating comparator
+		Collections.sort(movies, (o1, o2) -> {if(o1.getRating() <= o2.getRating()) {return -1;} else {return +1;}});
+		println("sort using Collections.sort and lambda for rating comparator :\n" + movies);
 	}
 
 }
