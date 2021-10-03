@@ -1,5 +1,6 @@
 package edu.java.basics.concurrency.runnable;
 
+//http://tutorials.jenkov.com/java-concurrency/creating-and-starting-threads.html
 public class RunnableClass implements Runnable {
 
 	@Override
@@ -12,7 +13,7 @@ public class RunnableClass implements Runnable {
 		// TODO Auto-generated method stub
 
 		Thread t = new Thread(new RunnableClass());
-		t.run();
+		t.start();
 	}
 
 }

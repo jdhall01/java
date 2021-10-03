@@ -11,7 +11,7 @@ public class RunnableAnonymous {
 			}
 		});
 		
-		t.run();
+		t.start();
 	}
 
 }

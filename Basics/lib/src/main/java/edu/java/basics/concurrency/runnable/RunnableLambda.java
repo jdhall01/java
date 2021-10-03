@@ -7,7 +7,7 @@ public class RunnableLambda {
 
 		Thread t = new Thread(() -> System.out.println("Inside Runnable lambda..."));
 		
-		t.run();
+		t.start();
 	}
 
 }
