@@ -2,6 +2,7 @@ package edu.java.basics.arrays.optional;
 
 import java.util.Optional;
 
+//https://www.baeldung.com/java-optional
 public class OptionalExample {
 
 	protected static void println(Object o) {
